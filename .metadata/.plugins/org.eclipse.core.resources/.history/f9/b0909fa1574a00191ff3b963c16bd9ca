@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2019-3-19 22:55:56 by Hibernate Tools 5.2.11.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="ipms" dynamic-insert="false" dynamic-update="false" mutable="true" name="entity.Systemapplicationinformation" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="systemapplicationinformation">
+        <id name="applicationId" type="java.lang.Integer">
+            <column name="ApplicationID"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="description" optimistic-lock="true" type="string" unique="false">
+            <column length="16777215" name="Description"/>
+        </property>
+        <property generated="never" lazy="false" name="applicationName" optimistic-lock="true" type="string" unique="false">
+            <column length="65535" name="ApplicationName"/>
+        </property>
+        <property generated="never" lazy="false" name="applicationType" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="ApplicationType"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2019-3-19 23:01:50 by Hibernate Tools 5.2.11.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="ipms" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.winginrian.hibernate.entity.Packagexmldocument" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="packagexmldocument">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="packageId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="PackageID"/>
+        </property>
+        <property generated="never" lazy="false" name="objectId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="ObjectID"/>
+        </property>
+        <property generated="never" lazy="false" name="objectName" optimistic-lock="true" type="string" unique="false">
+            <column length="16777215" name="ObjectName"/>
+        </property>
+        <property generated="never" lazy="false" name="description" optimistic-lock="true" type="string" unique="false">
+            <column length="16777215" name="Description"/>
+        </property>
+        <property generated="never" lazy="false" name="source" optimistic-lock="true" type="java.lang.Short" unique="false">
+            <column name="Source"/>
+        </property>
+        <property generated="never" lazy="false" name="fromSchemaId" optimistic-lock="true" type="java.lang.Short" unique="false">
+            <column name="FromSchemaID"/>
+        </property>
+        <property generated="never" lazy="false" name="xmldocument" optimistic-lock="true" type="string" unique="false">
+            <column length="16777215" name="XMLDocument"/>
+        </property>
+    </class>
+</hibernate-mapping>

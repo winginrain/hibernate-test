@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2019-3-20 6:15:52 by Hibernate Tools 5.2.12.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="ipms" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.winginrain.hibernate.hbm.Webserviceinformation" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="webserviceinformation">
+        <id name="applicationId" type="java.lang.Integer">
+            <column name="ApplicationId"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="inputSchema" optimistic-lock="true" type="string" unique="false">
+            <column name="InputSchema"/>
+        </property>
+        <property generated="never" lazy="false" name="methodName" optimistic-lock="true" type="string" unique="false">
+            <column name="MethodName"/>
+        </property>
+        <property generated="never" lazy="false" name="outputSchema" optimistic-lock="true" type="string" unique="false">
+            <column name="OutputSchema"/>
+        </property>
+        <property generated="never" lazy="false" name="passWord" optimistic-lock="true" type="string" unique="false">
+            <column name="PassWord"/>
+        </property>
+        <property generated="never" lazy="false" name="url" optimistic-lock="true" type="string" unique="false">
+            <column name="Url"/>
+        </property>
+        <property generated="never" lazy="false" name="userName" optimistic-lock="true" type="string" unique="false">
+            <column name="UserName"/>
+        </property>
+        <property generated="never" lazy="false" name="webServiceName" optimistic-lock="true" type="string" unique="false">
+            <column name="WebServiceName"/>
+        </property>
+    </class>
+</hibernate-mapping>

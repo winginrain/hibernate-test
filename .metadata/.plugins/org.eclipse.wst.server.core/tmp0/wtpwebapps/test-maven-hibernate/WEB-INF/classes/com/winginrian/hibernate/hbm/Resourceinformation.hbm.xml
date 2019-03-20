@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2019-3-20 3:52:46 by Hibernate Tools 5.2.11.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="ipms" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.winginrian.hibernate.hbm.Resourceinformation" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="resourceinformation">
+        <id name="resourceId" type="java.lang.Integer">
+            <column name="ResourceID"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="resourceName" optimistic-lock="true" type="string" unique="false">
+            <column length="65535" name="ResourceName"/>
+        </property>
+        <property generated="never" lazy="false" name="description" optimistic-lock="true" type="string" unique="false">
+            <column length="16777215" name="Description"/>
+        </property>
+        <property generated="never" lazy="false" name="resourceType" optimistic-lock="true" type="java.lang.Short" unique="false">
+            <column name="ResourceType"/>
+        </property>
+        <property generated="never" lazy="false" name="totalCount" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="TotalCount"/>
+        </property>
+        <property generated="never" lazy="false" name="availableCount" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="AvailableCount"/>
+        </property>
+        <property generated="never" lazy="false" name="standartCost" optimistic-lock="true" type="java.lang.Float" unique="false">
+            <column name="StandartCost" precision="12" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="extraCost" optimistic-lock="true" type="java.lang.Float" unique="false">
+            <column name="ExtraCost" precision="12" scale="0"/>
+        </property>
+    </class>
+</hibernate-mapping>

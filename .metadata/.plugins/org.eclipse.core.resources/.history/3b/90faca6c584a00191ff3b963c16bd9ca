@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2019-3-19 23:01:50 by Hibernate Tools 5.2.11.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="ipms" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.winginrian.hibernate.entity.Workflowactivityinformation" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="workflowactivityinformation">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="workflowId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="WorkflowID"/>
+        </property>
+        <property generated="never" lazy="false" name="activityId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="ActivityID"/>
+        </property>
+        <property generated="never" lazy="false" name="activityName" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="ActivityName"/>
+        </property>
+        <property generated="never" lazy="false" name="description" optimistic-lock="true" type="string" unique="false">
+            <column length="16777215" name="Description"/>
+        </property>
+        <property generated="never" lazy="false" name="activityType" optimistic-lock="true" type="java.lang.Short" unique="false">
+            <column name="ActivityType"/>
+        </property>
+        <property generated="never" lazy="false" name="activityImplementation" optimistic-lock="true" type="java.lang.Short" unique="false">
+            <column name="ActivityImplementation"/>
+        </property>
+        <property generated="never" lazy="false" name="twcid" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="TWCID"/>
+        </property>
+        <property generated="never" lazy="false" name="duration" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="Duration"/>
+        </property>
+        <property generated="never" lazy="false" name="multiPersonMode" optimistic-lock="true" type="java.lang.Short" unique="false">
+            <column name="MultiPersonMode"/>
+        </property>
+        <property generated="never" lazy="false" name="submitPersonNumber" optimistic-lock="true" type="java.lang.Short" unique="false">
+            <column name="SubmitPersonNumber"/>
+        </property>
+        <property generated="never" lazy="false" name="timeOffset" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="TimeOffset"/>
+        </property>
+    </class>
+</hibernate-mapping>

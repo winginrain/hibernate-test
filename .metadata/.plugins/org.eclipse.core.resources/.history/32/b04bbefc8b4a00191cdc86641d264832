@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2019-3-20 5:12:53 by Hibernate Tools 5.2.11.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="ipms" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.winginrain.hibernate.hbm.Processinformation" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="processinformation">
+        <id name="processId" type="java.lang.Integer">
+            <column name="ProcessID"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="workflowId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="WorkflowID"/>
+        </property>
+        <property generated="never" lazy="false" name="processName" optimistic-lock="true" type="string" unique="false">
+            <column length="16777215" name="ProcessName"/>
+        </property>
+        <property generated="never" lazy="false" name="parentProcessId" optimistic-lock="true" type="java.lang.Short" unique="false">
+            <column name="ParentProcessID"/>
+        </property>
+        <property generated="never" lazy="false" name="description" optimistic-lock="true" type="string" unique="false">
+            <column length="16777215" name="Description"/>
+        </property>
+        <property generated="never" lazy="false" name="state" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="State"/>
+        </property>
+        <property generated="never" lazy="false" name="twcid" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="TWCID"/>
+        </property>
+        <property generated="never" lazy="false" name="personAllocationStrategy" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="PersonAllocationStrategy"/>
+        </property>
+    </class>
+</hibernate-mapping>

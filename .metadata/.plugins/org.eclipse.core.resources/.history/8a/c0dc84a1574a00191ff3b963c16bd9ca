@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2019-3-19 22:55:56 by Hibernate Tools 5.2.11.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="ipms" dynamic-insert="false" dynamic-update="false" mutable="true" name="entity.Personinformation" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="personinformation">
+        <id name="personId" type="java.lang.Integer">
+            <column name="PersonID"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="personName" optimistic-lock="true" type="string" unique="false">
+            <column length="65535" name="PersonName"/>
+        </property>
+        <property generated="never" lazy="false" name="userName" optimistic-lock="true" type="string" unique="false">
+            <column length="65535" name="UserName"/>
+        </property>
+        <property generated="never" lazy="false" name="gender" optimistic-lock="true" type="string" unique="false">
+            <column length="45" name="Gender"/>
+        </property>
+        <property generated="never" lazy="false" name="birthDate" optimistic-lock="true" type="date" unique="false">
+            <column length="10" name="BirthDate"/>
+        </property>
+        <property generated="never" lazy="false" name="description" optimistic-lock="true" type="string" unique="false">
+            <column length="16777215" name="Description"/>
+        </property>
+        <property generated="never" lazy="false" name="phoneNumber" optimistic-lock="true" type="string" unique="false">
+            <column length="45" name="PhoneNumber"/>
+        </property>
+        <property generated="never" lazy="false" name="emailAddress" optimistic-lock="true" type="string" unique="false">
+            <column length="65535" name="EmailAddress"/>
+        </property>
+        <property generated="never" lazy="false" name="technicalPost" optimistic-lock="true" type="string" unique="false">
+            <column length="45" name="TechnicalPost"/>
+        </property>
+        <property generated="never" lazy="false" name="state" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="State"/>
+        </property>
+        <property generated="never" lazy="false" name="password" optimistic-lock="true" type="string" unique="false">
+            <column length="65535" name="Password"/>
+        </property>
+        <property generated="never" lazy="false" name="standardPersonCost" optimistic-lock="true" type="java.lang.Float" unique="false">
+            <column name="StandardPersonCost" precision="12" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="extraPersonCost" optimistic-lock="true" type="java.lang.Float" unique="false">
+            <column name="ExtraPersonCost" precision="12" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="heheheh" optimistic-lock="true" type="string" unique="false">
+            <column name="Heheheh"/>
+        </property>
+    </class>
+</hibernate-mapping>

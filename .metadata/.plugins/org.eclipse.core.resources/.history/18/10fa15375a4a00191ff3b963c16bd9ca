@@ -1,0 +1,73 @@
+package com.winginrian.hibernate.dao;
+// Generated 2019-3-19 23:18:13 by Hibernate Tools 5.2.11.Final
+
+
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+/**
+ * Home object for domain model class Processactivitysetvalue.
+ * @see com.winginrian.hibernate.dao.Processactivitysetvalue
+ * @author Hibernate Tools
+ */
+@Stateless
+public class ProcessactivitysetvalueHome {
+
+    private static final Log log = LogFactory.getLog(ProcessactivitysetvalueHome.class);
+
+    @PersistenceContext private EntityManager entityManager;
+    
+    public void persist(Processactivitysetvalue transientInstance) {
+        log.debug("persisting Processactivitysetvalue instance");
+        try {
+            entityManager.persist(transientInstance);
+            log.debug("persist successful");
+        }
+        catch (RuntimeException re) {
+            log.error("persist failed", re);
+            throw re;
+        }
+    }
+    
+    public void remove(Processactivitysetvalue persistentInstance) {
+        log.debug("removing Processactivitysetvalue instance");
+        try {
+            entityManager.remove(persistentInstance);
+            log.debug("remove successful");
+        }
+        catch (RuntimeException re) {
+            log.error("remove failed", re);
+            throw re;
+        }
+    }
+    
+    public Processactivitysetvalue merge(Processactivitysetvalue detachedInstance) {
+        log.debug("merging Processactivitysetvalue instance");
+        try {
+            Processactivitysetvalue result = entityManager.merge(detachedInstance);
+            log.debug("merge successful");
+            return result;
+        }
+        catch (RuntimeException re) {
+            log.error("merge failed", re);
+            throw re;
+        }
+    }
+    
+    public Processactivitysetvalue findById( Integer id) {
+        log.debug("getting Processactivitysetvalue instance with id: " + id);
+        try {
+            Processactivitysetvalue instance = entityManager.find(Processactivitysetvalue.class, id);
+            log.debug("get successful");
+            return instance;
+        }
+        catch (RuntimeException re) {
+            log.error("get failed", re);
+            throw re;
+        }
+    }
+}
+

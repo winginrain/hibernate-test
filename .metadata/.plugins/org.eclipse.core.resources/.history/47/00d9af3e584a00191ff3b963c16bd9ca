@@ -1,0 +1,73 @@
+package com.winginrian.hibernate.entity;
+// Generated 2019-3-19 23:02:59 by Hibernate Tools 5.2.11.Final
+
+
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+/**
+ * Home object for domain model class Packageschema.
+ * @see com.winginrian.hibernate.entity.Packageschema
+ * @author Hibernate Tools
+ */
+@Stateless
+public class PackageschemaHome {
+
+    private static final Log log = LogFactory.getLog(PackageschemaHome.class);
+
+    @PersistenceContext private EntityManager entityManager;
+    
+    public void persist(Packageschema transientInstance) {
+        log.debug("persisting Packageschema instance");
+        try {
+            entityManager.persist(transientInstance);
+            log.debug("persist successful");
+        }
+        catch (RuntimeException re) {
+            log.error("persist failed", re);
+            throw re;
+        }
+    }
+    
+    public void remove(Packageschema persistentInstance) {
+        log.debug("removing Packageschema instance");
+        try {
+            entityManager.remove(persistentInstance);
+            log.debug("remove successful");
+        }
+        catch (RuntimeException re) {
+            log.error("remove failed", re);
+            throw re;
+        }
+    }
+    
+    public Packageschema merge(Packageschema detachedInstance) {
+        log.debug("merging Packageschema instance");
+        try {
+            Packageschema result = entityManager.merge(detachedInstance);
+            log.debug("merge successful");
+            return result;
+        }
+        catch (RuntimeException re) {
+            log.error("merge failed", re);
+            throw re;
+        }
+    }
+    
+    public Packageschema findById( Integer id) {
+        log.debug("getting Packageschema instance with id: " + id);
+        try {
+            Packageschema instance = entityManager.find(Packageschema.class, id);
+            log.debug("get successful");
+            return instance;
+        }
+        catch (RuntimeException re) {
+            log.error("get failed", re);
+            throw re;
+        }
+    }
+}
+

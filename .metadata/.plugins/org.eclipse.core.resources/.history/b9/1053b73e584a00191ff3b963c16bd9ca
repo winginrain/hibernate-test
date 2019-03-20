@@ -1,0 +1,73 @@
+package com.winginrian.hibernate.entity;
+// Generated 2019-3-19 23:02:59 by Hibernate Tools 5.2.11.Final
+
+
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+/**
+ * Home object for domain model class Packagexmldocument.
+ * @see com.winginrian.hibernate.entity.Packagexmldocument
+ * @author Hibernate Tools
+ */
+@Stateless
+public class PackagexmldocumentHome {
+
+    private static final Log log = LogFactory.getLog(PackagexmldocumentHome.class);
+
+    @PersistenceContext private EntityManager entityManager;
+    
+    public void persist(Packagexmldocument transientInstance) {
+        log.debug("persisting Packagexmldocument instance");
+        try {
+            entityManager.persist(transientInstance);
+            log.debug("persist successful");
+        }
+        catch (RuntimeException re) {
+            log.error("persist failed", re);
+            throw re;
+        }
+    }
+    
+    public void remove(Packagexmldocument persistentInstance) {
+        log.debug("removing Packagexmldocument instance");
+        try {
+            entityManager.remove(persistentInstance);
+            log.debug("remove successful");
+        }
+        catch (RuntimeException re) {
+            log.error("remove failed", re);
+            throw re;
+        }
+    }
+    
+    public Packagexmldocument merge(Packagexmldocument detachedInstance) {
+        log.debug("merging Packagexmldocument instance");
+        try {
+            Packagexmldocument result = entityManager.merge(detachedInstance);
+            log.debug("merge successful");
+            return result;
+        }
+        catch (RuntimeException re) {
+            log.error("merge failed", re);
+            throw re;
+        }
+    }
+    
+    public Packagexmldocument findById( Integer id) {
+        log.debug("getting Packagexmldocument instance with id: " + id);
+        try {
+            Packagexmldocument instance = entityManager.find(Packagexmldocument.class, id);
+            log.debug("get successful");
+            return instance;
+        }
+        catch (RuntimeException re) {
+            log.error("get failed", re);
+            throw re;
+        }
+    }
+}
+

@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+E:\work\hibernate_test\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\758589550.index
+\test-maven-hibernate\src\main\resources

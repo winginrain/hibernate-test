@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2019-3-19 22:55:56 by Hibernate Tools 5.2.11.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="ipms" dynamic-insert="false" dynamic-update="false" mutable="true" name="entity.Workflowinformation" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="workflowinformation">
+        <id name="workflowId" type="java.lang.Integer">
+            <column name="WorkflowID"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="workflowType" optimistic-lock="true" type="java.lang.Short" unique="false">
+            <column name="WorkflowType"/>
+        </property>
+        <property generated="never" lazy="false" name="packageId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="PackageID"/>
+        </property>
+        <property generated="never" lazy="false" name="workflowName" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="WorkflowName"/>
+        </property>
+        <property generated="never" lazy="false" name="description" optimistic-lock="true" type="string" unique="false">
+            <column length="16777215" name="Description"/>
+        </property>
+        <property generated="never" lazy="false" name="createDate" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="CreateDate"/>
+        </property>
+        <property generated="never" lazy="false" name="authorId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="AuthorID"/>
+        </property>
+        <property generated="never" lazy="false" name="validFrom" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="ValidFrom"/>
+        </property>
+        <property generated="never" lazy="false" name="validTo" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="ValidTo"/>
+        </property>
+        <property generated="never" lazy="false" name="priority" optimistic-lock="true" type="java.lang.Short" unique="false">
+            <column name="Priority"/>
+        </property>
+        <property generated="never" lazy="false" name="minimalDuration" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="MinimalDuration"/>
+        </property>
+        <property generated="never" lazy="false" name="maximalDuration" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="MaximalDuration"/>
+        </property>
+        <property generated="never" lazy="false" name="twcid" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="TWCID"/>
+        </property>
+        <property generated="never" lazy="false" name="graphSvgStr" optimistic-lock="true" type="string" unique="false">
+            <column length="16777215" name="graphSvgStr"/>
+        </property>
+        <property generated="never" lazy="false" name="graphXmlStr" optimistic-lock="true" type="string" unique="false">
+            <column length="16777215" name="graphXmlStr"/>
+        </property>
+        <property generated="never" lazy="false" name="personAllocationStrategy" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="PersonAllocationStrategy"/>
+        </property>
+        <property generated="never" lazy="false" name="isValid" optimistic-lock="true" type="java.lang.Boolean" unique="false">
+            <column name="IsValid"/>
+        </property>
+    </class>
+</hibernate-mapping>

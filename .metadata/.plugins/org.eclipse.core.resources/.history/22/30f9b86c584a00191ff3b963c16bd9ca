@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2019-3-19 23:01:50 by Hibernate Tools 5.2.11.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="ipms" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.winginrian.hibernate.entity.Processobjectvariable" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="processobjectvariable">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="processId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="ProcessID"/>
+        </property>
+        <property generated="never" lazy="false" name="objectId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="ObjectID"/>
+        </property>
+        <property generated="never" lazy="false" name="objectName" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="ObjectName"/>
+        </property>
+        <property generated="never" lazy="false" name="description" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="Description"/>
+        </property>
+        <property generated="never" lazy="false" name="valueType" optimistic-lock="true" type="java.lang.Short" unique="false">
+            <column name="ValueType"/>
+        </property>
+        <property generated="never" lazy="false" name="fromObjectId" optimistic-lock="true" type="java.lang.Short" unique="false">
+            <column name="FromObjectID"/>
+        </property>
+        <property generated="never" lazy="false" name="xpath" optimistic-lock="true" type="string" unique="false">
+            <column length="16777215" name="XPath"/>
+        </property>
+        <property generated="never" lazy="false" name="value" optimistic-lock="true" type="string" unique="false">
+            <column name="value"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,73 @@
+package com.winginrian.hibernate.dao;
+// Generated 2019-3-19 23:18:13 by Hibernate Tools 5.2.11.Final
+
+
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+/**
+ * Home object for domain model class Processresponsibleroles.
+ * @see com.winginrian.hibernate.dao.Processresponsibleroles
+ * @author Hibernate Tools
+ */
+@Stateless
+public class ProcessresponsiblerolesHome {
+
+    private static final Log log = LogFactory.getLog(ProcessresponsiblerolesHome.class);
+
+    @PersistenceContext private EntityManager entityManager;
+    
+    public void persist(Processresponsibleroles transientInstance) {
+        log.debug("persisting Processresponsibleroles instance");
+        try {
+            entityManager.persist(transientInstance);
+            log.debug("persist successful");
+        }
+        catch (RuntimeException re) {
+            log.error("persist failed", re);
+            throw re;
+        }
+    }
+    
+    public void remove(Processresponsibleroles persistentInstance) {
+        log.debug("removing Processresponsibleroles instance");
+        try {
+            entityManager.remove(persistentInstance);
+            log.debug("remove successful");
+        }
+        catch (RuntimeException re) {
+            log.error("remove failed", re);
+            throw re;
+        }
+    }
+    
+    public Processresponsibleroles merge(Processresponsibleroles detachedInstance) {
+        log.debug("merging Processresponsibleroles instance");
+        try {
+            Processresponsibleroles result = entityManager.merge(detachedInstance);
+            log.debug("merge successful");
+            return result;
+        }
+        catch (RuntimeException re) {
+            log.error("merge failed", re);
+            throw re;
+        }
+    }
+    
+    public Processresponsibleroles findById( Integer id) {
+        log.debug("getting Processresponsibleroles instance with id: " + id);
+        try {
+            Processresponsibleroles instance = entityManager.find(Processresponsibleroles.class, id);
+            log.debug("get successful");
+            return instance;
+        }
+        catch (RuntimeException re) {
+            log.error("get failed", re);
+            throw re;
+        }
+    }
+}
+

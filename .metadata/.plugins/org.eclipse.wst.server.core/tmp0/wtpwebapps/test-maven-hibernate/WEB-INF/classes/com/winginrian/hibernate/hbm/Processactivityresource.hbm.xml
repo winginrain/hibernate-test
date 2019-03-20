@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2019-3-20 3:52:46 by Hibernate Tools 5.2.11.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="ipms" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.winginrian.hibernate.hbm.Processactivityresource" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="processactivityresource">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="processId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="ProcessID"/>
+        </property>
+        <property generated="never" lazy="false" name="activityId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="ActivityID"/>
+        </property>
+        <property generated="never" lazy="false" name="resourceId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="ResourceID"/>
+        </property>
+        <property generated="never" lazy="false" name="minimalNumber" optimistic-lock="true" type="java.lang.Short" unique="false">
+            <column name="MinimalNumber"/>
+        </property>
+        <property generated="never" lazy="false" name="maximalNumber" optimistic-lock="true" type="java.lang.Short" unique="false">
+            <column name="MaximalNumber"/>
+        </property>
+        <property generated="never" lazy="false" name="allocatedNumber" optimistic-lock="true" type="java.lang.Short" unique="false">
+            <column name="AllocatedNumber"/>
+        </property>
+    </class>
+</hibernate-mapping>

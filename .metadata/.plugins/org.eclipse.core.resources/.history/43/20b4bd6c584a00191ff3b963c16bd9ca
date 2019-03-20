@@ -1,0 +1,68 @@
+package com.winginrian.hibernate.entity;
+// Generated 2019-3-19 23:02:59 by Hibernate Tools 5.2.11.Final
+
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+/**
+ * Home object for domain model class Processresource.
+ * @see com.winginrian.hibernate.entity.Processresource
+ * @author Hibernate Tools
+ */
+@Stateless
+public class ProcessresourceHome {
+
+	private static final Log log = LogFactory.getLog(ProcessresourceHome.class);
+
+	@PersistenceContext
+	private EntityManager entityManager;
+
+	public void persist(Processresource transientInstance) {
+		log.debug("persisting Processresource instance");
+		try {
+			entityManager.persist(transientInstance);
+			log.debug("persist successful");
+		} catch (RuntimeException re) {
+			log.error("persist failed", re);
+			throw re;
+		}
+	}
+
+	public void remove(Processresource persistentInstance) {
+		log.debug("removing Processresource instance");
+		try {
+			entityManager.remove(persistentInstance);
+			log.debug("remove successful");
+		} catch (RuntimeException re) {
+			log.error("remove failed", re);
+			throw re;
+		}
+	}
+
+	public Processresource merge(Processresource detachedInstance) {
+		log.debug("merging Processresource instance");
+		try {
+			Processresource result = entityManager.merge(detachedInstance);
+			log.debug("merge successful");
+			return result;
+		} catch (RuntimeException re) {
+			log.error("merge failed", re);
+			throw re;
+		}
+	}
+
+	public Processresource findById(Integer id) {
+		log.debug("getting Processresource instance with id: " + id);
+		try {
+			Processresource instance = entityManager.find(Processresource.class, id);
+			log.debug("get successful");
+			return instance;
+		} catch (RuntimeException re) {
+			log.error("get failed", re);
+			throw re;
+		}
+	}
+}

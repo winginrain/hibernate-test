@@ -1,0 +1,68 @@
+package com.winginrian.hibernate.entity;
+// Generated 2019-3-19 23:02:59 by Hibernate Tools 5.2.11.Final
+
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+/**
+ * Home object for domain model class Caseperson.
+ * @see com.winginrian.hibernate.entity.Caseperson
+ * @author Hibernate Tools
+ */
+@Stateless
+public class CasepersonHome {
+
+	private static final Log log = LogFactory.getLog(CasepersonHome.class);
+
+	@PersistenceContext
+	private EntityManager entityManager;
+
+	public void persist(Caseperson transientInstance) {
+		log.debug("persisting Caseperson instance");
+		try {
+			entityManager.persist(transientInstance);
+			log.debug("persist successful");
+		} catch (RuntimeException re) {
+			log.error("persist failed", re);
+			throw re;
+		}
+	}
+
+	public void remove(Caseperson persistentInstance) {
+		log.debug("removing Caseperson instance");
+		try {
+			entityManager.remove(persistentInstance);
+			log.debug("remove successful");
+		} catch (RuntimeException re) {
+			log.error("remove failed", re);
+			throw re;
+		}
+	}
+
+	public Caseperson merge(Caseperson detachedInstance) {
+		log.debug("merging Caseperson instance");
+		try {
+			Caseperson result = entityManager.merge(detachedInstance);
+			log.debug("merge successful");
+			return result;
+		} catch (RuntimeException re) {
+			log.error("merge failed", re);
+			throw re;
+		}
+	}
+
+	public Caseperson findById(Integer id) {
+		log.debug("getting Caseperson instance with id: " + id);
+		try {
+			Caseperson instance = entityManager.find(Caseperson.class, id);
+			log.debug("get successful");
+			return instance;
+		} catch (RuntimeException re) {
+			log.error("get failed", re);
+			throw re;
+		}
+	}
+}

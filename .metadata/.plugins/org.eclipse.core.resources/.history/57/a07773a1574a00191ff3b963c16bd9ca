@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2019-3-19 22:55:56 by Hibernate Tools 5.2.11.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="ipms" dynamic-insert="false" dynamic-update="false" mutable="true" name="entity.Caseinformation" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="caseinformation">
+        <id name="caseId" type="java.lang.Integer">
+            <column name="CaseID"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="caseName" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="CaseName"/>
+        </property>
+        <property generated="never" lazy="false" name="description" optimistic-lock="true" type="string" unique="false">
+            <column length="16777215" name="Description"/>
+        </property>
+        <property generated="never" lazy="false" name="packageId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="PackageID"/>
+        </property>
+        <property generated="never" lazy="false" name="initiatorId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="InitiatorID"/>
+        </property>
+        <property generated="never" lazy="false" name="initiatorDate" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="InitiatorDate"/>
+        </property>
+        <property generated="never" lazy="false" name="durationUnit" optimistic-lock="true" type="java.lang.Character" unique="false">
+            <column length="1" name="DurationUnit"/>
+        </property>
+        <property generated="never" lazy="false" name="costUnit" optimistic-lock="true" type="java.lang.Float" unique="false">
+            <column name="CostUnit" precision="12" scale="0"/>
+        </property>
+    </class>
+</hibernate-mapping>

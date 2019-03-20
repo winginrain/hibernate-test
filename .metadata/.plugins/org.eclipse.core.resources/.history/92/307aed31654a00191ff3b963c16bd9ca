@@ -1,0 +1,68 @@
+package com.winginrian.hibernate.dao;
+// Generated 2019-3-19 23:18:13 by Hibernate Tools 5.2.11.Final
+
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+/**
+ * Home object for domain model class Processactivityrole.
+ * @see com.winginrian.hibernate.dao.Processactivityrole
+ * @author Hibernate Tools
+ */
+@Stateless
+public class ProcessactivityroleHome {
+
+	private static final Log log = LogFactory.getLog(ProcessactivityroleHome.class);
+
+	@PersistenceContext
+	private EntityManager entityManager;
+
+	public void persist(Processactivityrole transientInstance) {
+		log.debug("persisting Processactivityrole instance");
+		try {
+			entityManager.persist(transientInstance);
+			log.debug("persist successful");
+		} catch (RuntimeException re) {
+			log.error("persist failed", re);
+			throw re;
+		}
+	}
+
+	public void remove(Processactivityrole persistentInstance) {
+		log.debug("removing Processactivityrole instance");
+		try {
+			entityManager.remove(persistentInstance);
+			log.debug("remove successful");
+		} catch (RuntimeException re) {
+			log.error("remove failed", re);
+			throw re;
+		}
+	}
+
+	public Processactivityrole merge(Processactivityrole detachedInstance) {
+		log.debug("merging Processactivityrole instance");
+		try {
+			Processactivityrole result = entityManager.merge(detachedInstance);
+			log.debug("merge successful");
+			return result;
+		} catch (RuntimeException re) {
+			log.error("merge failed", re);
+			throw re;
+		}
+	}
+
+	public Processactivityrole findById(Integer id) {
+		log.debug("getting Processactivityrole instance with id: " + id);
+		try {
+			Processactivityrole instance = entityManager.find(Processactivityrole.class, id);
+			log.debug("get successful");
+			return instance;
+		} catch (RuntimeException re) {
+			log.error("get failed", re);
+			throw re;
+		}
+	}
+}

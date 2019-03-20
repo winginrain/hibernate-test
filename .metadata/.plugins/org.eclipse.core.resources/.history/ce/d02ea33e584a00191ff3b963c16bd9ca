@@ -1,0 +1,73 @@
+package com.winginrian.hibernate.entity;
+// Generated 2019-3-19 23:02:59 by Hibernate Tools 5.2.11.Final
+
+
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+/**
+ * Home object for domain model class Workflowactivityoutputmapping.
+ * @see com.winginrian.hibernate.entity.Workflowactivityoutputmapping
+ * @author Hibernate Tools
+ */
+@Stateless
+public class WorkflowactivityoutputmappingHome {
+
+    private static final Log log = LogFactory.getLog(WorkflowactivityoutputmappingHome.class);
+
+    @PersistenceContext private EntityManager entityManager;
+    
+    public void persist(Workflowactivityoutputmapping transientInstance) {
+        log.debug("persisting Workflowactivityoutputmapping instance");
+        try {
+            entityManager.persist(transientInstance);
+            log.debug("persist successful");
+        }
+        catch (RuntimeException re) {
+            log.error("persist failed", re);
+            throw re;
+        }
+    }
+    
+    public void remove(Workflowactivityoutputmapping persistentInstance) {
+        log.debug("removing Workflowactivityoutputmapping instance");
+        try {
+            entityManager.remove(persistentInstance);
+            log.debug("remove successful");
+        }
+        catch (RuntimeException re) {
+            log.error("remove failed", re);
+            throw re;
+        }
+    }
+    
+    public Workflowactivityoutputmapping merge(Workflowactivityoutputmapping detachedInstance) {
+        log.debug("merging Workflowactivityoutputmapping instance");
+        try {
+            Workflowactivityoutputmapping result = entityManager.merge(detachedInstance);
+            log.debug("merge successful");
+            return result;
+        }
+        catch (RuntimeException re) {
+            log.error("merge failed", re);
+            throw re;
+        }
+    }
+    
+    public Workflowactivityoutputmapping findById( Integer id) {
+        log.debug("getting Workflowactivityoutputmapping instance with id: " + id);
+        try {
+            Workflowactivityoutputmapping instance = entityManager.find(Workflowactivityoutputmapping.class, id);
+            log.debug("get successful");
+            return instance;
+        }
+        catch (RuntimeException re) {
+            log.error("get failed", re);
+            throw re;
+        }
+    }
+}
+

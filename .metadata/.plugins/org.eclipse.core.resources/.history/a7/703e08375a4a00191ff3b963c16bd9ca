@@ -1,0 +1,73 @@
+package com.winginrian.hibernate.dao;
+// Generated 2019-3-19 23:18:13 by Hibernate Tools 5.2.11.Final
+
+
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+/**
+ * Home object for domain model class Workflowdocument.
+ * @see com.winginrian.hibernate.dao.Workflowdocument
+ * @author Hibernate Tools
+ */
+@Stateless
+public class WorkflowdocumentHome {
+
+    private static final Log log = LogFactory.getLog(WorkflowdocumentHome.class);
+
+    @PersistenceContext private EntityManager entityManager;
+    
+    public void persist(Workflowdocument transientInstance) {
+        log.debug("persisting Workflowdocument instance");
+        try {
+            entityManager.persist(transientInstance);
+            log.debug("persist successful");
+        }
+        catch (RuntimeException re) {
+            log.error("persist failed", re);
+            throw re;
+        }
+    }
+    
+    public void remove(Workflowdocument persistentInstance) {
+        log.debug("removing Workflowdocument instance");
+        try {
+            entityManager.remove(persistentInstance);
+            log.debug("remove successful");
+        }
+        catch (RuntimeException re) {
+            log.error("remove failed", re);
+            throw re;
+        }
+    }
+    
+    public Workflowdocument merge(Workflowdocument detachedInstance) {
+        log.debug("merging Workflowdocument instance");
+        try {
+            Workflowdocument result = entityManager.merge(detachedInstance);
+            log.debug("merge successful");
+            return result;
+        }
+        catch (RuntimeException re) {
+            log.error("merge failed", re);
+            throw re;
+        }
+    }
+    
+    public Workflowdocument findById( Integer id) {
+        log.debug("getting Workflowdocument instance with id: " + id);
+        try {
+            Workflowdocument instance = entityManager.find(Workflowdocument.class, id);
+            log.debug("get successful");
+            return instance;
+        }
+        catch (RuntimeException re) {
+            log.error("get failed", re);
+            throw re;
+        }
+    }
+}
+

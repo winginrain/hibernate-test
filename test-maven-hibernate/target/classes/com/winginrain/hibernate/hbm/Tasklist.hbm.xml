@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2019-3-20 6:15:52 by Hibernate Tools 5.2.12.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="ipms" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.winginrain.hibernate.hbm.Tasklist" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="tasklist">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="processId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="ProcessID"/>
+        </property>
+        <property generated="never" lazy="false" name="activityId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="ActivityID"/>
+        </property>
+        <property generated="never" lazy="false" name="roleId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="RoleID"/>
+        </property>
+        <property generated="never" lazy="false" name="processName" optimistic-lock="true" type="string" unique="false">
+            <column length="16777215" name="ProcessName"/>
+        </property>
+        <property generated="never" lazy="false" name="activityName" optimistic-lock="true" type="string" unique="false">
+            <column length="16777215" name="ActivityName"/>
+        </property>
+        <property generated="never" lazy="false" name="description" optimistic-lock="true" type="string" unique="false">
+            <column length="16777215" name="Description"/>
+        </property>
+        <property generated="never" lazy="false" name="definedStartDate" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="DefinedStartDate"/>
+        </property>
+        <property generated="never" lazy="false" name="definedEndDate" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="DefinedEndDate"/>
+        </property>
+        <property generated="never" lazy="false" name="actualStartDate" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="19" name="ActualStartDate"/>
+        </property>
+        <property generated="never" lazy="false" name="completionRate" optimistic-lock="true" type="java.lang.Float" unique="false">
+            <column name="CompletionRate" precision="12" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="taskUrl" optimistic-lock="true" type="string" unique="false">
+            <column length="16777215" name="TaskURL"/>
+        </property>
+        <property generated="never" lazy="false" name="state" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="State"/>
+        </property>
+    </class>
+</hibernate-mapping>

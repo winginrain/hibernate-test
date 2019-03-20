@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory name="SessionFactory">
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/ipms</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.connection.username">ipms</property>
+        <property name="hibernate.connection.password">12345678</property>
+        <property name="hbm2ddl.auto" >create</property>
+        <property name="show_sql">true</property>
+        		<property name="mappingResources"> <list> <value>/com/winginrian/hibernate/hbm//NodeCategories.hbm.xml</value> 
+			<value>/com/winginrian/hibernate/hbm//NodeInformations.hbm.xml</value> <value>/com/winginrian/hibernate/hbm//WikiRelationships.hbm.xml</value> 
+			<value>/com/winginrian/hibernate/hbm//NodeFunctions.hbm.xml</value> <value>/com/winginrian/hibernate/hbm//EdgeAttributes.hbm.xml</value> 
+			<value>/com/winginrian/hibernate/hbm//HomelandTopics.hbm.xml</value> <value>/com/winginrian/hibernate/hbm//Workflowprocessecarule.hbm.xml 
+			</value> <value>/com/winginrian/hibernate/hbm//WorkflowComments.hbm.xml</value> 
+			<value>/com/winginrian/hibernate/hbm//Processflowobjects.hbm.xml</value> <value>/com/winginrian/hibernate/hbm//WikiAndWorkflowInformations.hbm.xml 
+			</value> <value>/com/winginrian/hibernate/hbm//Systemschema.hbm.xml</value> <value>/com/winginrian/hibernate/hbm//Processapplication.hbm.xml</value> 
+			<value>/com/winginrian/hibernate/hbm//Workflowapplication.hbm.xml</value> <value>/com/winginrian/hibernate/hbm//SchemaMigrations.hbm.xml</value> 
+			<value>/com/winginrian/hibernate/hbm//WorkflowCategories.hbm.xml</value> <value>/com/winginrian/hibernate/hbm//WorkflowTags.hbm.xml</value> 
+			<value>/com/winginrian/hibernate/hbm//Workflowflowobjects.hbm.xml</value> <value>/com/winginrian/hibernate/hbm//Processprocessecarule.hbm.xml 
+			</value> <value>/com/winginrian/hibernate/hbm//ProcessInformations.hbm.xml</value> 
+			<value>/com/winginrian/hibernate/hbm//TestAlgorithms.hbm.xml</value> <value>/com/winginrian/hibernate/hbm//HomelandReplies.hbm.xml</value> 
+			<value>/com/winginrian/hibernate/hbm//Processactivityinputmapping.hbm.xml </value> 
+			<value>/com/winginrian/hibernate/hbm//Workflowflowobjectcontrol.hbm.xml </value> 
+			<value>/com/winginrian/hibernate/hbm//Workflowactivityinputmapping.hbm.xml </value> 
+			<value>/com/winginrian/hibernate/hbm//NodeOptionValues.hbm.xml</value> <value>/com/winginrian/hibernate/hbm//ProcessResults.hbm.xml</value> 
+			<value>/com/winginrian/hibernate/hbm//Systemxmldocument.hbm.xml</value> <value>/com/winginrian/hibernate/hbm//TaskPerformances.hbm.xml</value> 
+			<value>/com/winginrian/hibernate/hbm//Workflowflow.hbm.xml</value> <value>/com/winginrian/hibernate/hbm//WorkflowPrivileges.hbm.xml</value> 
+			<value>/com/winginrian/hibernate/hbm//WorkflowInformationAndTags.hbm.xml </value> 
+			<value>/com/winginrian/hibernate/hbm//UserPictures.hbm.xml</value> <value>/com/winginrian/hibernate/hbm//PersonInformations.hbm.xml</value> 
+			<value>/com/winginrian/hibernate/hbm//Processcondition.hbm.xml</value> <value>/com/winginrian/hibernate/hbm//Workflowcondition.hbm.xml</value> 
+			<value>/com/winginrian/hibernate/hbm//Processactivityinformation.hbm.xml </value> 
+			<value>/com/winginrian/hibernate/hbm//Workflowevent.hbm.xml</value> <value>/com/winginrian/hibernate/hbm//Processrepeatedinformation.hbm.xml 
+			</value> <value>/com/winginrian/hibernate/hbm//Processinherentvariable.hbm.xml 
+			</value> <value>/com/winginrian/hibernate/hbm//Caseinformation.hbm.xml</value> 
+			<value>/com/winginrian/hibernate/hbm//ArffTypes.hbm.xml</value> <value>/com/winginrian/hibernate/hbm//Systemapplicationinformation.hbm.xml 
+			</value> <value>/com/winginrian/hibernate/hbm//Workflowactivityinvokingapplication.hbm.xml 
+			</value> <value>/com/winginrian/hibernate/hbm//UploadFiles.hbm.xml</value> <value>/com/winginrian/hibernate/hbm//Processflowobjectcontrol.hbm.xml 
+			</value> <value>/com/winginrian/hibernate/hbm//Workflowactivityinformation.hbm.xml 
+			</value> <value>/com/winginrian/hibernate/hbm//Processactivityinvokingapplication.hbm.xml 
+			</value> <value>/com/winginrian/hibernate/hbm//DownloadFiles.hbm.xml</value> <value>/com/winginrian/hibernate/hbm//TaskCategories.hbm.xml</value> 
+			<value>/com/winginrian/hibernate/hbm//Workflowobject.hbm.xml</value> <value>/com/winginrian/hibernate/hbm//NodeTypes.hbm.xml</value> 
+			<value>/com/winginrian/hibernate/hbm//Users.hbm.xml</value> <value>/com/winginrian/hibernate/hbm//Processinformation.hbm.xml</value> 
+			<value>/com/winginrian/hibernate/hbm//SharedProcessPrivileges.hbm.xml </value> 
+			<value>/com/winginrian/hibernate/hbm//Processobject.hbm.xml</value> <value>/com/winginrian/hibernate/hbm//TaskCategoryAndWikis.hbm.xml</value> 
+			<value>/com/winginrian/hibernate/hbm//Processcontrolflowcondition.hbm.xml </value> 
+			<value>/com/winginrian/hibernate/hbm//NodeCategories.hbm.xml</value> <value>/com/winginrian/hibernate/hbm//ProcessFiles.hbm.xml</value> 
+			<value>/com/winginrian/hibernate/hbm//WorkflowInformations.hbm.xml</value> <value>/com/winginrian/hibernate/hbm//Packageinformation.hbm.xml</value> 
+			<value>/com/winginrian/hibernate/hbm//Processflow.hbm.xml</value> <value>/com/winginrian/hibernate/hbm//Workflowinherentvariable.hbm.xml 
+			</value> <value>/com/winginrian/hibernate/hbm//Javaclassmethod.hbm.xml</value> 
+			<value>/com/winginrian/hibernate/hbm//NodeOptions.hbm.xml</value> <value>/com/winginrian/hibernate/hbm//Processevent.hbm.xml</value> 
+			<value>/com/winginrian/hibernate/hbm//NodeOptionChoices.hbm.xml</value> <value>/com/winginrian/hibernate/hbm//WikiPages.hbm.xml</value> 
+			<value>/com/winginrian/hibernate/hbm//DepartmentInformations.hbm.xml </value> <value>/com/winginrian/hibernate/hbm//Separators.hbm.xml</value> 
+			<value>/com/winginrian/hibernate/hbm//Processlogs.hbm.xml</value> <value>/com/winginrian/hibernate/hbm//NodeOptionTypes.hbm.xml</value> 
+			<value>/com/winginrian/hibernate/hbm//WikiPageVersions.hbm.xml</value> <value>/com/winginrian/hibernate/hbm//Workflowcontrolflowcondition.hbm.xml 
+			</value> <value>/com/winginrian/hibernate/hbm//HomelandNodes.hbm.xml</value> <value>/com/winginrian/hibernate/hbm//WikiReferences.hbm.xml</value> 
+			</list> </property>
+    </session-factory>
+</hibernate-configuration>

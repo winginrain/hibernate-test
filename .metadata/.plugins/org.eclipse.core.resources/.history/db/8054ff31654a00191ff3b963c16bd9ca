@@ -1,0 +1,68 @@
+package com.winginrian.hibernate.dao;
+// Generated 2019-3-19 23:18:13 by Hibernate Tools 5.2.11.Final
+
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+/**
+ * Home object for domain model class Workflowresponsibleroles.
+ * @see com.winginrian.hibernate.dao.Workflowresponsibleroles
+ * @author Hibernate Tools
+ */
+@Stateless
+public class WorkflowresponsiblerolesHome {
+
+	private static final Log log = LogFactory.getLog(WorkflowresponsiblerolesHome.class);
+
+	@PersistenceContext
+	private EntityManager entityManager;
+
+	public void persist(Workflowresponsibleroles transientInstance) {
+		log.debug("persisting Workflowresponsibleroles instance");
+		try {
+			entityManager.persist(transientInstance);
+			log.debug("persist successful");
+		} catch (RuntimeException re) {
+			log.error("persist failed", re);
+			throw re;
+		}
+	}
+
+	public void remove(Workflowresponsibleroles persistentInstance) {
+		log.debug("removing Workflowresponsibleroles instance");
+		try {
+			entityManager.remove(persistentInstance);
+			log.debug("remove successful");
+		} catch (RuntimeException re) {
+			log.error("remove failed", re);
+			throw re;
+		}
+	}
+
+	public Workflowresponsibleroles merge(Workflowresponsibleroles detachedInstance) {
+		log.debug("merging Workflowresponsibleroles instance");
+		try {
+			Workflowresponsibleroles result = entityManager.merge(detachedInstance);
+			log.debug("merge successful");
+			return result;
+		} catch (RuntimeException re) {
+			log.error("merge failed", re);
+			throw re;
+		}
+	}
+
+	public Workflowresponsibleroles findById(Integer id) {
+		log.debug("getting Workflowresponsibleroles instance with id: " + id);
+		try {
+			Workflowresponsibleroles instance = entityManager.find(Workflowresponsibleroles.class, id);
+			log.debug("get successful");
+			return instance;
+		} catch (RuntimeException re) {
+			log.error("get failed", re);
+			throw re;
+		}
+	}
+}
